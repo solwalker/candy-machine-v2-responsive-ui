@@ -187,7 +187,7 @@ const BorderLinearProgress = styled(LinearProgress)`
 
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
-    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
+    background-color: black; 
   }
 `;
 
@@ -580,7 +580,7 @@ const Home = (props: HomeProps) => {
                 <WalletContainer>
                     <Wallet>
                         {wallet ?
-                            <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
+                            <WalletAmount>{(balance || 0.5).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
@@ -588,15 +588,15 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>Gangster Zodiacs</h2>
+                            <h2>SolRaiderz</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="gz.gif"
-                                alt="Mint Gangster Zodiacs"/></div>
+                                src="sr_logo.png"
+                                alt="Mint SolRaiderz"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
-                              <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token" }.</h3>}
+                              <h3>You own {whitelistTokenBalance} SolRaiderz WL mint {whitelistTokenBalance > 1 ? "tokens" : "token" }.</h3>}
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
                               <h3>You are whitelisted and allowed to mint.</h3>}
                             {wallet && isActive && endDate && Date.now() < endDate.getTime() &&
