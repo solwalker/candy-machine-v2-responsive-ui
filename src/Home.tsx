@@ -580,7 +580,7 @@ const Home = (props: HomeProps) => {
                 <WalletContainer>
                     <Wallet>
                         {wallet ?
-                            <WalletAmount>{(balance || 0.5).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
+                            <WalletAmount>{(balance || 0.079).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
@@ -588,15 +588,15 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>SolRaiderz</h2>
+                            <h2>Big Blockchain Cucks Club</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="sr_logo.png"
-                                alt="Mint SolRaiderz"/></div>
+                                src="BBC.jpeg"
+                                alt="Mint BBC"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
-                              <h3>You own {whitelistTokenBalance} SolRaiderz WL mint {whitelistTokenBalance > 1 ? "tokens" : "token" }.</h3>}
+                              <h3>You own {whitelistTokenBalance} BBC WL mint {whitelistTokenBalance > 1 ? "tokens" : "token" }.</h3>}
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
                               <h3>You are whitelisted and allowed to mint.</h3>}
                             {wallet && isActive && endDate && Date.now() < endDate.getTime() &&
